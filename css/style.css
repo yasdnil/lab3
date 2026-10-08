@@ -1,1 +1,77 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
 
+.page-layout {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "hd"
+        "nv"
+        "mn"
+        "ft";
+}
+
+.header {
+    grid-area: hd;
+    background-color: rgb(255, 221, 227);
+    padding: 20px;
+}
+
+.nav {
+    grid-area: nv;
+    background-color: rgb(82, 220, 174);
+    padding: 20px;
+}
+
+.main {
+    grid-area: mn;
+    background-color: rgb(62, 170, 207);
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.footer {
+    grid-area: ft;
+    background-color: rgb(255, 88, 116);
+    padding: 20px;
+}
+
+.card {
+    background-color: rgb(255, 205, 205);
+    padding: 20px;
+}
+
+.card1 {
+    background-color: lightgreen;
+}
+
+.card2 {
+    background-color: lightcoral;
+}
+
+.card3 {
+    background-color: rgb(253, 151, 114);
+}
+
+
+@media (min-width: 768px) {
+
+    .page-layout {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "hd hd"
+            "nv mn"
+            "ft ft";
+    }
+
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card1 {
+        grid-column: 1 / -1;
+    }
+}
